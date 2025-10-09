@@ -1,0 +1,60 @@
+@use "bootstrap/scss/bootstrap" as *;
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//global
+
+p {
+    text-align: justify;
+}
+
+body {
+    padding-top: 5vh;
+}
+
+// Nav
+
+.navbar.fixed-top {
+    height: 5vh;
+    border-bottom: 1px solid black;
+    width: 100vw;
+    background: white;
+}
+
+// Resume
+$first-col-width: 8rem; // Estimated width for widest first column ("Label")
+
+$col-widths: (
+    1: 8rem,
+    2: 10rem,
+    3: 12rem,
+    4: 14rem
+);
+
+.custom-container {
+  @include make-container();
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+
+    .custom-grid {
+        @include make-row(); // Bootstrap row with gutters
+
+        @each $i, $first-col-width in $col-widths {
+            .custom-col-#{$i} {
+                @include make-col-ready(); // Adds padding for gutters
+                @include make-col();
+
+                &:nth-child(1) {
+                    flex: 0 0 $first-col-width; // Override Bootstrap flex for consistency
+                }
+            }
+        }
+    }
+}
