@@ -1,169 +1,245 @@
 function Resume() {
     return (
-        <div>
-            <h1>Resume</h1>
+        <div class="row">
+            <div class="col-2">
+                <nav id="left-nav" class="navbar navbar-brand flex-column align-items-start gap-2 ">
+                    <a class="nav-link fw-normal" aria-current="page"href="#basics">Basics</a>
+                    <a class="nav-link fw-normal" aria-current="page"href="#work">Work</a>
+                    <a class="nav-link fw-normal" aria-current="page" href="#education">Education</a>
+                    <a class="nav-link fw-normal" aria-current="page" href="#certificates">Certificates</a>
+                    <a class="nav-link fw-normal" aria-current="page" href="#stack">Stack</a>
+                    <a class="nav-link fw-normal" aria-current="page" href="#engineering">Engineering</a>
+                    <a class="nav-link fw-normal" aria-current="page" href="#languages">Languages</a>
+                </nav>
+            </div>
+            <div class="col">  
+                <div id="section-container" data-bs-spy="scroll" data-bs-target="#left-nav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                    <h1>Resume</h1>
+                    <section id="basics" class="custom-container">
+                        <h2>Basics</h2>
+                        <div class="custom-grid">
+                            <div class="custom-col-1 pb-2 fw-semibold">Name</div>
+                            <div class="custom-col-1 pb-2">Diego Guevara</div>
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-1 pb-2 fw-semibold">Label</div>
+                            <div class="custom-col-1 pb-2">Engineer Developer</div>
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-1 pb-2 fw-semibold">Email</div>
+                            <div class="custom-col-1 pb-2"><a href="mailto:dbguevaral@gmail.com?subject=Hello, Diego">dbguevaral@gmail.com</a></div>
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-1 pb-2 fw-semibold">Phone</div>
+                            <div class="custom-col-1 pb-2"><a href="tel:+51915936711">+51 915936711</a></div>
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-1 pb-2 fw-semibold">Summary</div>
+                            <p class="custom-col-1 pb-2">Peruvian full stack developer (junior) with an electromechanical engineering background, specializing in renewable energy solutions and experienced in JavaScript, React & Node.js.</p>
+                        </div>  
+                    </section>
 
-            <section class="custom-container">
-                <h2>Basics</h2>
-                <div class="custom-grid">
-                    <p class="custom-col-1">Name</p>
-                    <p class="custom-col-1">Diego Guevara</p>
-                </div>
-                <div class="custom-grid">
-                    <p class="custom-col-1">Label</p>
-                    <p class="custom-col-1">Electromechanical Engineer - Full Stack Developer</p>
-                </div>
-                <div class="custom-grid">
-                    <p class="custom-col-1">Email</p>
-                    <p class="custom-col-1">dbguevaral@gmail.com</p>
-                </div>
-                <div class="custom-grid">
-                    <p class="custom-col-1">Phone</p>
-                    <p class="custom-col-1">+51 915936711</p>
-                </div>
-                <div class="custom-grid">
-                    <p class="custom-col-1">Url</p>
-                    <p class="custom-col-1"> dbguevaral.github.io</p>
-                </div>    
-            </section>
+                    <section id="work" class="custom-container">
+                        <h2>Work</h2>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">11.2023 - 01.2024</span></div>
+                            <div class="custom-col-2">
+                                <h4>Drafter in the Metallurgy Area</h4>
+                                <h5>Autoprocesos S.A.C.</h5>
+                                <p>Development of flow diagrams for the expansion to 2100
+            tons per day of the custom-colquisiri mining unit at the basic
+            engineering level during the last quarter of 2023 and the
+            beginning of this year.</p>
+                            </div>          
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">03.2019 - 07.2022</span></div>
+                            <div class="custom-col-2">
+                                <h4>Drafter in the Electrical and Metallurgy Area</h4>
+                                <h5>GEMIN Associates</h5>
+                                <p> Development of single-line diagrams, power and control
+            systems, grounding, and lighting in the electrical discipline.
+            In metallurgy, flow diagrams were created for all areas of
+            the metallurgical process. In both disciplines, participation
+            was at the basic and detailed engineering levels for
+            concentrator plant projects such as Sumaq Rumi, Antapite,
+            Morococha, and Huarón.</p>
+                            </div>          
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">09.2018 - 02.2019</span></div>
+                            <div class="custom-col-2">
+                                <h4>Drafter in the Instrumentation Area</h4>
+                                <h5>Environmental Science Engineering & Gis S.R.L 
+            Escegis</h5>
+                                <p>Drawing of P&ID diagrams, as well as architectural and
+            control plans and instrument layout at the basic
+            engineering level for the expansion of El Porvenir mining
+            unit.</p>
+                            </div>          
+                        </div>
+                                
+                    </section>
 
-            <section class="custom-container">
-                <h2>Work</h2>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2023.11 - 2024.01</div>
-                    <div class="custom-col-2">
-                        <h5>Drafter in the Metallurgy Area</h5>
-                        <h6>Autoprocesos S.A.C.</h6>
-                        <p>Development of flow diagrams for the expansion to 2100
-    tons per day of the custom-colquisiri mining unit at the basic
-    engineering level during the last quarter of 2023 and the
-    beginning of this year.</p>
-                    </div>          
-                </div>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2019.03 - 2022.07</div>
-                    <div class="custom-col-2">
-                        <h5>Drafter in the Electrical and Metallurgy Area</h5>
-                        <h6>GEMIN Associates</h6>
-                        <p> Development of single-line diagrams, power and control
-    systems, grounding, and lighting in the electrical discipline.
-    In metallurgy, flow diagrams were created for all areas of
-    the metallurgical process. In both disciplines, participation
-    was at the basic and detailed engineering levels for
-    concentrator plant projects such as Sumaq Rumi, Antapite,
-    Morococha, and Huarón.</p>
-                    </div>          
-                </div>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2018.09 - 2019.02</div>
-                    <div class="custom-col-2">
-                        <h5>Drafter in the Instrumentation Area</h5>
-                        <h6>Environmental Science Engineering & Gis S.R.L 
-    Escegis</h6>
-                        <p>Drawing of P&ID diagrams, as well as architectural and
-    control plans and instrument layout at the basic
-    engineering level for the expansion of the El Porvenir mining
-    unit.</p>
-                    </div>          
-                </div>
-                     
-            </section>
+                    <section id="education" class="custom-container">
+                        <h2>Education</h2>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">04.2023 - Present</span></div>
+                            <div class="custom-col-2">
+                                <h4>Master's in Renewable Energies</h4>
+                                <p><span class="fw-semibold">Universidad Europea de Madrid</span><br/>Coursework Completed (Thesis Pending)</p>
+                            </div>          
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">03.2022 - 02.2023</span></div>
+                            <div class="custom-col-2">
+                                <h4><a target="_blank" href="/assets/title.jpg">Professional Title of<br/>Electromechanical Engineer</a></h4>
+                                <p><span class="fw-semibold">Universidad Tecnológica del Perú</span></p>
+                            </div>          
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">01.2017 - 02.2022</span></div>
+                            <div class="custom-col-2">
+                                <h4><a target="_blank" href="/assets/bachelor.jpg">Bachelor's in <br/>Electromechanical Engineering</a></h4>
+                                <p class="fw-semibold">Universidad Tecnológica del Perú</p>
+                            </div>          
+                        </div>
+                        <div class="custom-grid">
+                            <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">01.2015 - 12.2016</span></div>
+                            <div class="custom-col-2">
+                                <h4>Bachelor's in Electronic Engineering</h4>
+                                <p><span class="fw-semibold">Universidad Nacional del Callao</span><br/>Completed to 4th Semester</p>
+                            </div>          
+                        </div>
+                    </section>
 
-            <section class="custom-container">
-                <h2>Education</h2>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2023.04 - 2024.04</div>
-                    <div class="custom-col-2">
-                        <h5>Universidad Europea de Madrid</h5>
-                        <p>Graduated in a master's degree in Renewable Energies</p>
-                    </div>          
-                </div>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2018.09 - 2019.02</div>
-                    <div class="custom-col-2">
-                        <h5>Universidad Tecnológica del Perú</h5>
-                        <p> Engineer in Electromechanical Engineering</p>
-                    </div>          
-                </div>
-                <div class="custom-grid">
-                    <div class="custom-col-2">2015.01 - 2016.12</div>
-                    <div class="custom-col-2">
-                        <h5>Universidad Nacional del Callao</h5>
-                        <p>Electronic Engineering - 4th semester</p>
-                    </div>          
-                </div>
-            </section>
+                    <section id="certificates" class="custom-container">
+                        <h2>Certificates</h2>
+                        <div>
+                            <ul>
+                                <div class="row">
+                                    <div class="col">
+                                        <li >
+                                            <h5><a target="_blank" href="/assets/quality.jpg">Quality Assurance</a></h5>
+                                            <h6>freeCodeCamp</h6><p>29.09.2025</p>
+                                        </li>
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/back.jpg">Back End Development and APIs</a></h5>
+                                            <h6>freeCodeCamp</h6><p>19.08.2025</p>
+                                        </li>
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/d3.jpg">Data Visualization</a></h5>
+                                            <h6>freeCodeCamp</h6><p>30.07.2025</p>
+                                        </li>
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/front.jpg">Front End Development Libraries</a></h5>
+                                            <h6>freeCodeCamp</h6><p>23.06.2025</p>
+                                        </li>
+                                    </div>
+                                    <div class="col">
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/javascript.jpg">JavaScript Algorithms and Data Structures</a></h5>
+                                            <h6>freeCodeCamp</h6><p>05.05.2025</p>
+                                        </li>
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/responsive.jpg">Responsive Web Design</a></h5>
+                                            <h6>freeCodeCamp</h6><p>10.04.2025</p>
+                                        </li>
+                                        <li>
+                                            <h5><a target="_blank" href="/assets/powerbi.jpg">Power BI Course</a></h5>
+                                            <h6>Idat</h6><p>05.12.2022</p>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </section>
 
-            <section class="custom-container">
-                <h2>Engineering</h2>
-                <div>
-                    <h5>Areas of Expertise</h5>
-                    <div>
-                        <ul>
-                            <li>Automation and Control</li>
-                            <li>Electricity Grid</li>
-                            <li>Metallurgical Process</li>
-                            <li>Power Station</li>
-                            <li>Renewable Energies</li>
-                        </ul>
-                    </div>          
-                </div>
-                <div>
-                    <h5>Engineering Tools</h5>
-                    <div>
-                        <ul>
-                            <li>AutoCAD</li>
-                            <li>AutoCAD Plant 3D</li>
-                            <li>Inventor</li>
-                            <li>PVSyst</li>
-                            <li>WAsP</li>
-                            <li>Windographer</li>
-                        </ul>
-                    </div>          
-                </div>
-            </section>
+                    <section id="stack" class="custom-container">
+                        <h2>Stack</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Languages</h5>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                </ul>
 
-            <section class="custom-container">
-                <h2>Stack</h2>
-                <div>
-                    <h5>Languages</h5>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div>    
-                    <h5>Frameworks & Libraries</h5>
-                    <ul>
-                        <li>jQuery</li>
-                        <li>Express</li>
-                        <li>Sass</li>
-                        <li>React</li>
-                        <li>Redux</li>
-                        <li>React-Redux</li>
-                        <li>D3</li>
-                        <li>Node.js</li>
-                        <li>Express</li> 
-                        <li>Mongoose</li>
-                        <li>Chai</li> 
-                    </ul>       
-                </div>
+                                <h5>Tools & Platforms</h5>
+                                <ul>
+                                    <li>Git & GitHub</li>
+                                    <li>VS Code</li>
+                                    <li>npm</li>
+                                    <li>Replit</li>
+                                    <li>Code Sand Box</li>
+                                </ul>
+                            </div>
+                            <div class="col">    
+                                <h5>Frameworks & Libraries</h5>
+                                <ul>
+                                    <li>jQuery</li>
+                                    <li>Express</li>
+                                    <li>Sass</li>
+                                    <li>React</li>
+                                    <li>Redux</li>
+                                    <li>React-Redux</li>
+                                    <li>D3</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li> 
+                                    <li>Mongoose</li>
+                                    <li>Chai</li> 
+                                </ul>       
+                            </div>
+                        </div>
+                    </section>
 
-                <div>    
-                    <h5>Tools & Platforms</h5>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>npm</li>
-                        <li>Replit</li>
-                        <li>Code Sand Box</li>
-                    </ul>        
-                </div>
-            </section>
+                    <section id="engineering" class="custom-container">
+                        <h2>Engineering</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Areas of Expertise</h5>
+                                <div>
+                                    <ul>
+                                        <li>Automation and Control</li>
+                                        <li>Electricity Grid</li>
+                                        <li>Metallurgical Process</li>
+                                        <li>Power Station</li>
+                                        <li>Renewable Energies</li>
+                                    </ul>
+                                </div>          
+                            </div>
+                            <div class="col">
+                                <h5>Engineering Tools</h5>
+                                <div>
+                                    <ul>
+                                        <li>AutoCAD</li>
+                                        <li>AutoCAD Plant 3D</li>
+                                        <li>Inventor</li>
+                                        <li>PVSyst</li>
+                                        <li>WAsP</li>
+                                        <li>Windographer</li>
+                                    </ul>
+                                </div>          
+                            </div>
+                        </div>
+                    </section>
 
-            <h2>Resume download as pdf</h2>
-            <h2>Contact me!</h2>
+                    <section id="languages" class="custom-container">
+                        <h2>Languages</h2>
+                        <div class="row">
+                            <div class="col">
+                                <h6>Spanish</h6>
+                                <p>Native</p>
+                            </div>
+                            <div class="col">
+                                <h6>English</h6>
+                                <p>Fluent</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>          
+            </div>
         </div>
     )
 }

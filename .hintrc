@@ -3,18 +3,7 @@
     "development"
   ],
   "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "mask-image",
-          "mask-size",
-          "mask-position",
-          "-webkit-text-size-adjust",
-          "text-align: -webkit-match-parent"
-        ]
-      }
-    ],
+    "compat-api/css": "off",
     "css-prefix-order": "off"
   }
 }

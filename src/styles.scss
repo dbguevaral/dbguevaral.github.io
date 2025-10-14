@@ -1,47 +1,99 @@
 @use "bootstrap/scss/bootstrap" as *;
 
+//variables
+
+$light-text: $gray-100;
+$light-text-emphasis: $gray-200;
+$dark-text: $gray-900;
+$dark-text-emphasis: $gray-700;
+
+$info: $cyan;
+
+//global
+
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-//global
-
-p {
-    text-align: justify;
+html {
+    scroll-padding-top: 4rem; //offset for fixed nav
 }
 
 body {
-    padding-top: 5vh;
+    margin: 0 auto;
+}
+
+p {
+    color: $dark-text;
+    text-align: justify;
+}
+
+h2 {
+    margin-left: -0.25rem;
+}
+
+
+
+#content {
+    margin-top: 3.5rem;
+    min-width: 400px;
+    max-width: 900px;
+    scroll-behavior: smooth;
 }
 
 // Nav
 
-.navbar.fixed-top {
-    height: 5vh;
-    border-bottom: 1px solid black;
-    width: 100vw;
-    background: white;
+#top-nav {
+    background-color: white;
+    z-index: 10;
+    height: 3.5rem;
+
+    .hovering {
+        cursor: pointer;
+    }
+}
+
+#left-nav {
+    margin-top: 1.5rem;
+    scroll-behavior: smooth;
+
+    .nav-link.active {
+        background-color: $info; // Use your $cyan variable for visibility
+        color: $dark-text; // Ensure contrast
+        font-weight: bold; // Optional for emphasis
+    }
 }
 
 // Resume
-$first-col-width: 8rem; // Estimated width for widest first column ("Label")
 
 $col-widths: (
-    1: 8rem,
-    2: 10rem,
+    1: 6rem,
+    2: 10.5rem,
     3: 12rem,
     4: 14rem
 );
 
+#section-container { 
+    position: relative;
+    height: 90vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 1rem 2rem;
+}
+
 .custom-container {
   @include make-container();
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  font-family: 'Arial', sans-serif;
-  color: #333;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  a {
+    color: #007BFF !important;
+    text-decoration: none !important;
+  }
 
     .custom-grid {
         @include make-row(); // Bootstrap row with gutters
@@ -56,5 +108,21 @@ $col-widths: (
                 }
             }
         }
+
+        .to-highlight { //highlighted text
+            background-color: $info;
+            padding: 0.2rem;
+            color: $dark-text;
+        }
+
+        .pad-tp { //padding for highligheted text
+            padding-top: 0.25rem;
+        }
     }
+    
 }
+
+// Repositories
+
+
+
