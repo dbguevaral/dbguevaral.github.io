@@ -93,14 +93,14 @@ function Resume() {
                         <div class="custom-grid">
                             <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">03.2022 - 02.2023</span></div>
                             <div class="custom-col-2">
-                                <h4><a target="_blank" href="/assets/title.jpg">Professional Title of<br/>Electromechanical Engineer</a></h4>
+                                <h4><a target="_blank" href="https://imgur.com/Q8HiFsY">Professional Title of<br/>Electromechanical Engineer</a></h4>
                                 <p><span class="fw-semibold">Universidad Tecnológica del Perú</span></p>
                             </div>          
                         </div>
                         <div class="custom-grid">
                             <div class="custom-col-2 pad-tp"><span class="rounded-1 fw-semibold">01.2017 - 02.2022</span></div>
                             <div class="custom-col-2">
-                                <h4><a target="_blank" href="/assets/bachelor.jpg">Bachelor's in <br/>Electromechanical Engineering</a></h4>
+                                <h4><a target="_blank" href="https://imgur.com/5O3VMqn">Bachelor's in <br/>Electromechanical Engineering</a></h4>
                                 <p class="fw-semibold">Universidad Tecnológica del Perú</p>
                             </div>          
                         </div>
@@ -120,33 +120,33 @@ function Resume() {
                                 <div class="row">
                                     <div class="col">
                                         <li >
-                                            <h5><a target="_blank" href="/assets/quality.jpg">Quality Assurance</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/quality-assurance-v7">Quality Assurance</a></h5>
                                             <h6>freeCodeCamp</h6><p>29.09.2025</p>
                                         </li>
                                         <li>
-                                            <h5><a target="_blank" href="/assets/back.jpg">Back End Development and APIs</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/back-end-development-and-apis">Back End Development and APIs</a></h5>
                                             <h6>freeCodeCamp</h6><p>19.08.2025</p>
                                         </li>
                                         <li>
-                                            <h5><a target="_blank" href="/assets/d3.jpg">Data Visualization</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/data-visualization">Data Visualization</a></h5>
                                             <h6>freeCodeCamp</h6><p>30.07.2025</p>
                                         </li>
                                         <li>
-                                            <h5><a target="_blank" href="/assets/front.jpg">Front End Development Libraries</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/front-end-development-libraries">Front End Development Libraries</a></h5>
                                             <h6>freeCodeCamp</h6><p>23.06.2025</p>
                                         </li>
                                     </div>
                                     <div class="col">
                                         <li>
-                                            <h5><a target="_blank" href="/assets/javascript.jpg">JavaScript Algorithms and Data Structures</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></h5>
                                             <h6>freeCodeCamp</h6><p>05.05.2025</p>
                                         </li>
                                         <li>
-                                            <h5><a target="_blank" href="/assets/responsive.jpg">Responsive Web Design</a></h5>
+                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/responsive-web-design">Responsive Web Design</a></h5>
                                             <h6>freeCodeCamp</h6><p>10.04.2025</p>
                                         </li>
                                         <li>
-                                            <h5><a target="_blank" href="/assets/powerbi.jpg">Power BI Course</a></h5>
+                                            <h5><a target="_blank" href="https://imgur.com/4Zz5YRF">Power BI Course</a></h5>
                                             <h6>Idat</h6><p>05.12.2022</p>
                                         </li>
                                     </div>
