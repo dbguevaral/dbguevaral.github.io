@@ -25,6 +25,7 @@
   "homepage": "https://github.com/dbguevaral/dbguevaral.github.io#readme",
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
     "jquery": "^3.7.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

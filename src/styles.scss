@@ -11,12 +11,6 @@ $info: $cyan;
 
 //global
 
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-padding-top: 4rem; //offset for fixed nav
 }
@@ -34,13 +28,16 @@ h2 {
     margin-left: -0.25rem;
 }
 
+i {
+    font-size: 3rem;
+}
+
 
 
 #content {
-    margin-top: 3.5rem;
-    min-width: 400px;
-    max-width: 900px;
+    margin-top: 4rem;
     scroll-behavior: smooth;
+    max-width: 900px; 
 }
 
 // Nav
@@ -56,7 +53,7 @@ h2 {
 }
 
 #left-nav {
-    margin-top: 1.5rem;
+    top: 4rem;
     scroll-behavior: smooth;
 
     .nav-link.active {
@@ -65,6 +62,26 @@ h2 {
         font-weight: bold; // Optional for emphasis
     }
 }
+
+//About
+
+#about {
+
+    a {
+        text-decoration: none;
+        color: #007BFF
+    }
+
+    .about-date {
+    min-width: 6rem;
+    }
+
+    .about-mail {
+        min-width: 10rem;
+    }
+}
+
+
 
 // Resume
 
@@ -77,10 +94,7 @@ $col-widths: (
 
 #section-container { 
     position: relative;
-    height: 90vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
 }
 
 .custom-container {
@@ -95,34 +109,23 @@ $col-widths: (
     text-decoration: none !important;
   }
 
-    .custom-grid {
-        @include make-row(); // Bootstrap row with gutters
+  .date {
+    min-width: 10rem;
+  }
 
-        @each $i, $first-col-width in $col-widths {
-            .custom-col-#{$i} {
-                @include make-col-ready(); // Adds padding for gutters
-                @include make-col();
-
-                &:nth-child(1) {
-                    flex: 0 0 $first-col-width; // Override Bootstrap flex for consistency
-                }
-            }
-        }
-
-        .to-highlight { //highlighted text
-            background-color: $info;
-            padding: 0.2rem;
-            color: $dark-text;
-        }
-
-        .pad-tp { //padding for highligheted text
-            padding-top: 0.25rem;
-        }
-    }
-    
+  .basics {
+    min-width: 7rem;
+  }
+  
 }
 
 // Repositories
 
+#repositories {
+
+    .img-style {
+        margin-bottom: 0.5rem;
+    }
+}
 
 
