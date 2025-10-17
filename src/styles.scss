@@ -12,7 +12,7 @@ $info: $cyan;
 //global
 
 html {
-    scroll-padding-top: 4rem; //offset for fixed nav
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -56,10 +56,8 @@ i {
     top: 4rem;
     scroll-behavior: smooth;
 
-    .nav-link.active {
-        background-color: $info; // Use your $cyan variable for visibility
-        color: $dark-text; // Ensure contrast
-        font-weight: bold; // Optional for emphasis
+    .active{
+        color: green;
     }
 }
 
@@ -105,8 +103,8 @@ $col-widths: (
   margin-bottom: 1rem;
 
   a {
-    color: #007BFF !important;
-    text-decoration: none !important;
+    color: #007BFF;
+    text-decoration: none;
   }
 
   .date {

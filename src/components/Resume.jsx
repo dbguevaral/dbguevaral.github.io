@@ -3,18 +3,18 @@ function Resume() {
         <div id="resume">
             <div class="row">
                 <div class="col-2 d-sm-block d-none">
-                    <nav id="left-nav" class="navbar navbar-brand flex-column sticky-top align-items-start gap-2 ">
-                        <a class="nav-link fw-normal" aria-current="page"href="#basics">Basics</a>
-                        <a class="nav-link fw-normal" aria-current="page"href="#work">Work</a>
-                        <a class="nav-link fw-normal" aria-current="page" href="#education">Education</a>
-                        <a class="nav-link fw-normal" aria-current="page" href="#certificates">Certificates</a>
-                        <a class="nav-link fw-normal" aria-current="page" href="#stack">Stack</a>
+                    <nav id="left-nav" class="navbar navbar-brand flex-column align-items-start sticky-top gap-2 ">
+                        <a class="nav-link fw-normal" href="#basics">Basics</a>
+                        <a class="nav-link fw-normal" href="#work">Work</a>
+                        <a class="nav-link fw-normal" href="#education">Education</a>
+                        <a class="nav-link fw-normal" href="#certificates">Certificates</a>
+                        <a class="nav-link fw-normal" href="#stack">Stack</a>
                         <a class="nav-link fw-normal" aria-current="page" href="#engineering">Engineering</a>
-                        <a class="nav-link fw-normal" aria-current="page" href="#languages">Languages</a>
+                        <a class="nav-link fw-normal" href="#languages">Languages</a>
                     </nav>
                 </div>
                 <div class="col">  
-                    <div id="section-container">
+                    <div id="section-container" data-bs-spy="scroll" data-bs-target="#left-nav" data-bs-smooth-scroll="true" tabindex="0">
                         <h1 class="display-3">Resume</h1>
                         <section id="basics" class="custom-container">
                             <div><h2 >Basics</h2></div>
