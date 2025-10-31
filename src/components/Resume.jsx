@@ -36,7 +36,7 @@ function Resume() {
                             </div>
                             <div class="row">
                                 <div class="col-md-2 basics pb-2 fw-semibold">Summary</div>
-                                <p class="col pb-2">Peruvian full stack developer (junior) with an electromechanical engineering background, specializing in renewable energy solutions and experienced in JavaScript, React & Node.js.</p>
+                                <p class="col pb-2">Professional peruvian full stack developer with an electromechanical engineering background, specializing in renewable energy solutions and experienced in JavaScript, React & Node.js.</p>
                             </div>  
                         </section>
 
