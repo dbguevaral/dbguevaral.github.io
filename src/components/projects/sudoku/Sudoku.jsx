@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {fillPuzzle, checkPlacement, solvePuzzle} from './sudoku-api.js';
 
+//darle color a los que ya están hechos y los que estoy poniendo, poner un historial de las ultimas jugadas, temporizador, checkplacement que se pueda hacer en el mismo punto donde uno escribe en la casilla, boton para regresar el ultimo movimiento (ctr z), verify string button
 function Sudoku() {
     const [puzzle, setPuzzle] = useState('');
     const [coordinate, setCoordinate] = useState('');

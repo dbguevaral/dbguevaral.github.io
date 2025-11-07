@@ -191,6 +191,9 @@ textarea {
 
 // Peak Solar Hours
 
+.worst-case {
+  color: red;
+}
 
 // Resume
 
@@ -208,7 +211,7 @@ $col-widths: (
 
 .custom-container {
   @include make-container();
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
   border-radius: 10px;
   margin-bottom: 1rem;
