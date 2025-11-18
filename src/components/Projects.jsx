@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Sudoku from './projects/sudoku/Sudoku';
 import PeakSolarHours from './projects/psh/PeakSolarHours';
+import LayoutMaker from './projects/solar layout maker/LayoutMaker';
 
 function Projects() {
     const [project, setProject] = useState();
@@ -25,14 +26,14 @@ function Projects() {
                     <img class="col-md-3 col-6" src="https://i.imgur.com/SIBoIPN.jpeg"/>
                 </div>
                 <div id="project4" class="col border border-dark border-2 rounded-end-4 d-flex align-items-center banner-container ps-2 hovering" onClick={() => setProject('tobedefined')}>
-                    <div class="col fw-semibold" >To be defined</div>
+                    <div class="col fw-semibold" >On progress</div>
                     <img class="col-md-3 col-6" src="https://i.imgur.com/bq4ckz7.jpeg"/>
                 </div>
             </div>
             <div class="mb-2">
                 {project === 'sudoku' && <Sudoku/>}
                 {project === 'peaksolarhours' && <PeakSolarHours/>}
-                {project === 'solarlayoutmaker' && null}
+                {project === 'solarlayoutmaker' && <LayoutMaker/>}
                 {project === 'tobedefined' && null}
             </div>
         </div>

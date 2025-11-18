@@ -58,7 +58,6 @@ function PeakSolarHours() {
             tiltedPeakSunHours(results.current.irradiance, results.current.kt, prev.current.lat);
             console.log('Average PSH tilted values has been displayed');
         }
-        
     };
 
     return (
@@ -66,15 +65,16 @@ function PeakSolarHours() {
             <h1>Peak Sun Hours Getter</h1>
             <p class="justifying-text">Peak sun hours is a parameter that measures the effective solar radiation absorbed by photovoltaic panels. It indicates how many hours sunlight will hit a specific area with a load of 1 kW/m².</p>
             <p class="justifying-text">If you want to know how many peak sun hours a location has, check the options bellow and fill 'em.</p>
-            <p class="fw-bold">Select one option from each row</p>
+            <p class="fw-semibold">Select one option from each row</p>
             <form onSubmit={handleSubmit}>
-                <div class="row border border-2 g-0 p-2 gap-2">
+                <div class="row border border-2 g-0 p-2 gx-2">
                     <div class="col">
                         <div class="form-check">
-                            <input type="radio" id="dir-box" class="form-check-input" name="data-coord" onChange={() => setLocationForm('dir-box')} required/>
                             <label class="form-check-label" for="dir-box">Using address</label>
+                            <input type="radio" id="dir-box" class="form-check-input" name="data-coord" onChange={() => setLocationForm('dir-box')} required/>
                         </div>
                         <input id="autocomplete" class="form-control" type="text" disabled={locationForm !== 'dir-box'} placeholder="Your address" value={dirText} onChange={e => setDirText(e.target.value)} required></input>
+                        <div class="form-text">You must select an option when looking for you address</div>
                     </div>
                     <div class="col">
                         <div class="form-check">
@@ -85,6 +85,7 @@ function PeakSolarHours() {
                             <input class="form-control" type="text" disabled={locationForm !== 'coord-box'} value={latValue} onChange={e => setLatValue(e.target.value)} placeholder="Lat." required/>
                             <input class="form-control" type="text" disabled={locationForm !== 'coord-box'} value={lngValue} onChange={e => setLngValue(e.target.value)} placeholder="Long." required/>   
                         </div>
+                        <div class="form-text">Only plain number is allowed</div>
                     </div>
                 </div>
                 <div class="row mt-2 border border-2 g-0 p-2">
@@ -93,17 +94,19 @@ function PeakSolarHours() {
                             <input type="radio" id="horizontal" class="form-check-input" name="plane" onChange={() => setOrientationForm('horizontal')} required/>
                             <label class="form-check-label" for="horizontal">Horizontal Plane</label>
                         </div>
+                        <div class="form-text">For panels flat on roof, facing straight to the top - 0° tilt</div>
                     </div>
                     <div class="col">
                         <div class="form-check">
                             <input type="radio" id="tilted" class="form-check-input" name="plane" onChange={() => setOrientationForm('tilted')} required/>
                             <label class="form-check-label" for="tilted">Tilted Plane</label>
                         </div>
+                        <div class="form-text">For panels tilted at optimal latitude angle</div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>
             </form>
-            <section id="results" class="mt-2">
+            <section id="results-psh" class="mt-2">
             </section>
         </div>
     )

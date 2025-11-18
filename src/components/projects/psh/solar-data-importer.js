@@ -21,15 +21,18 @@ export function horizontalPeakSunHours(irradianceData) {
         const annualAvg = last[1];
         const minValue = Math.min(...irradianceData.map(([_, value]) => value));
         const minMonth = months[Number(irradianceData.find(([_, value]) => minValue === value)[0].slice(-2)) - 1];
-        const results = document.getElementById('results');
+        const results = document.getElementById('results-psh');
 
         results.innerHTML = 
-        `<p class="fw-semibold">Average Peak Sun Hours Per Month For An Horizontal Plane</p>
-        <div class="row border border-end-0 border-bottom-0 g-0">
-            ${irradianceData.filter(([month, _]) => !month.endsWith('13')).map(([month, value]) => `<div class="col-sm-2 col-4 border-end border-bottom ps-2">${months[Number(month.slice(-2)) - 1]}: ${value.toFixed(2)}h</div>`).join('')}
-        </div>
-        <div class="mt-2"><span class="fw-semibold">Annual</span> Average Peak Solar Hours during 2024 is: ${annualAvg.toFixed(2)}h</div>
-        <div class="mt-2">Worst Case on <span class="fw-semibold worst-case">${minMonth}</span> where its Peak Solar Hours is: ${minValue.toFixed(2)}h</div>`
+        `<div class="results">
+        <h2>Results</h2>   
+            <p class="fw-semibold">Average Peak Sun Hours Per Month For An Horizontal Plane</p>
+            <div class="row border border-end-0 border-bottom-0 g-0">
+                ${irradianceData.filter(([month, _]) => !month.endsWith('13')).map(([month, value]) => `<div class="col-sm-2 col-4 border-end border-bottom ps-2">${months[Number(month.slice(-2)) - 1]}: ${value.toFixed(2)}h</div>`).join('')}
+            </div>
+            <div class="mt-2"><span class="fw-semibold">Annual</span> Average Peak Solar Hours during 2024 is: ${annualAvg.toFixed(2)}h</div>
+            <div class="mt-2">Worst Case on <span class="fw-semibold worst-case">${minMonth}</span> where its Peak Solar Hours is: ${minValue.toFixed(2)}h</div>
+        </div>`
     } catch (err) {
         console.error(err.message);
     }
@@ -44,7 +47,7 @@ export function tiltedPeakSunHours(irradianceData, kt, lat) {
     const worstKtIndex = values.indexOf(minValue);
     const worstKt = kt[worstKtIndex][1];
     const minMonth = months[Number(irradianceData.find(([_, value]) => minValue === value)[0].slice(-2)) - 1];
-    const results = document.getElementById('results');
+    const results = document.getElementById('results-psh');
 
     const arrOfDays = mathe.daysPerPeriod(minMonth);
     const {arrOfSunDec, avgSunDec} = mathe.sunDeclination(arrOfDays);
