@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 import {useMemo, useEffect, useRef} from 'react';
 import LayoutCalculator from './layout-calculator';
+import { useTheme } from '@/components/Theme.jsx';
 
 export default function LayoutDrawer({
   psh, 
@@ -35,8 +36,11 @@ export default function LayoutDrawer({
   
   console.log('Actual Plane String Number: ', calc.actualPlaneParalallelNumber(), 'Excess Plane Number: ', calc.excessPlaneNumber());
 
+  const { theme } = useTheme();
+
   useEffect(() => {
     if (!calc) return;
+    
 
     const renderGrid = () => {
 
@@ -81,7 +85,7 @@ export default function LayoutDrawer({
       .attr('y', d => yScale(d.y))
       .attr('width', planePixelLength)
       .attr('height', planePixelWidth)
-      .attr('fill', '#0f172a');
+      .attr('fill', theme === 'light' ? '#0f172a' : '#ced4da');
 
       function addDimension(x1, y1, x2, y2, text, options = {}) {
         const { offset = 30, textOffset = 10 } = options;
@@ -110,7 +114,7 @@ export default function LayoutDrawer({
           .attr('orient', 'auto-start-reverse')
           .append('path')
           .attr('d', 'M 0 0 L 10 5 L 0 10 z')
-          .attr('fill', '#333');
+          .attr('fill', theme === 'light' ? '#333' : 'white');
         }
 
         g.append('line')
@@ -126,7 +130,7 @@ export default function LayoutDrawer({
         g.append('line')
         .attr('x1', xScale(lineX1)).attr('y1', yScale(lineY1))
         .attr('x2', xScale(lineX2)).attr('y2', yScale(lineY2))
-        .attr('stroke', '#333')
+        .attr('stroke', theme === 'light' ? '#333' : 'white')
         .attr('stroke-width', 2)
         .attr('marker-start', 'url(#arrow)')
         .attr('marker-end', 'url(#arrow)');
@@ -141,7 +145,7 @@ export default function LayoutDrawer({
         .attr('transform', isVertical ? `translate(${xScale(midX) - 15}, ${yScale(midY)}) rotate(-90)` : null)
         .attr('font-family', 'Arial, Helvetica, sans-serif')
         .attr('font-size', '14px')
-        .attr('fill', '#000')
+        .attr('fill', theme === 'light' ? '#333' : 'white')
         .text(text);
       }
 
@@ -152,7 +156,7 @@ export default function LayoutDrawer({
     // to add length, width, minimum distance legend or something, more info aswell in the summary
 
     renderGrid();
-  }, [calc]);
+  }, [calc, theme]);
 
   return (
     <div>
