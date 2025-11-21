@@ -10,7 +10,7 @@ export default function Nav ({ setSection }) {
                     <button class="navbar-toggler d-sm-none d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-canvas-nav" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div id="off-canvas-nav" class="offcanvas offcanvas-end w-25" tabindex="-1" aria-labelledby="off-canvas-nav">
+                    <div id="off-canvas-nav" class="offcanvas offcanvas-end w-50" tabindex="-1" aria-labelledby="off-canvas-nav">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="off-canvas-nav-label">Menu</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
