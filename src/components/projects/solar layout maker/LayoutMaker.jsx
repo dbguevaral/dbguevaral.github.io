@@ -55,10 +55,10 @@ function LayoutMaker() {
         <div>
             <h1>Solar Layout Maker</h1>
             <p class="justifying-text">To meet electrical demand needs, it's required to know the amount of solar panels that can accomplish it. For this, a grid of Planes is needed, taking in consideration the number of panels arranged in parallel rows and series strings, while matching each panel's voltage, current and power. This application goal is to simplify this task by building automatically the grid of solar panels by entering the total system power plus Plane specs.</p>
-            <p class="fw-semibold">Fill the following inputs to design the system's grid: </p>
-            <form onSubmit={handleSubmit}>
-                <div class="row border border-2 g-0 p-2 gx-2">
-                    <h4>System's General</h4>
+            <p class="fw-semibold">Fill the following inputs to create the system's grid</p>
+            <form onSubmit={handleSubmit} class="row gap-2">
+                <div class="row">
+                    <h4>Location General Parameters</h4>
                     <div class="col-sm-4 col-6">
                         <label for="psh" class="form-label">Peak Sun Hours (h)</label>
                         <input type="number" class="form-control" id="psh" value={psh} onChange={(e) => setPsh(e.target.value)}/>
@@ -72,7 +72,7 @@ function LayoutMaker() {
                         <input type="number" class="form-control" id="latitude" value={lat} onChange={(e) => setLat(e.target.value)}/>
                     </div>
                 </div> 
-                <div class="row border border-2 g-0 p-2 gx-2 mt-2">
+                <div class="row">
                     <h4>Panel Specs</h4>
                     <div class="col-sm-4 col-6">
                         <label for="plane-power" class="form-label">Panel's Power (W)</label>
@@ -95,7 +95,7 @@ function LayoutMaker() {
                         <input type="number" class="form-control" id="plane-length" value={planeLength} onChange={(e) => setPlaneLength(e.target.value)}/>
                     </div>
                 </div>
-                <div class="row border border-2 g-0 p-2 gx-2 mt-2">
+                <div class="row">
                     <h4>Inverter Specs</h4>
                     <div class="col-sm-4 col-6">
                         <label for="inv-power" class="form-label">Inverter Power (W)</label>
@@ -114,16 +114,19 @@ function LayoutMaker() {
                         <input type="number" class="form-control" id="inv-max-curr" value={maxInvCurr} onChange={(e) => setMaxInvCurr(e.target.value)}/>
                     </div>
                 </div>
-                <div class="col-sm-4 col-6 d-flex align-items-end mb-2">
-                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                <div>
+                    <button class="btn btn-primary" type="submit">Submit</button> 
                 </div>      
             </form>
-            <button class="me-2 btn btn-secondary"onClick={planeEra340}>Plane #1 (Era 340W)</button>
-            <button class="me-2 btn btn-secondary" onClick={mustSolar10kW}>Inverter #1 (Must Solar 10kW)</button>
-            <button class="btn btn-secondary" onClick={exampleCase}>System's General #1</button>
+            <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-secondary" onClick={exampleCase}>System's General Example</button>
+                <button class="col btn btn-secondary" onClick={planeEra340}>Solar Panel 340W Example</button>
+                <button class="col btn btn-secondary" onClick={mustSolar10kW}>Inverter 10kW Example</button>
+            </div>
+                 
             <div id="results-layoutmaker" class="mt-2">
                 {showDrawer && calculatorProps && (<LayoutDrawer {...calculatorProps} />)}
-            </div> 
+            </div>
         </div>
     )
 }

@@ -18,6 +18,7 @@ export default function LayoutDrawer({
   invPower
 }) {
   const containerRef = useRef(null);
+  const { theme } = useTheme();
   const calc = useMemo(() => {
     try {
       return new LayoutCalculator(
@@ -29,51 +30,39 @@ export default function LayoutDrawer({
     }
   }, [psh, totalSystemEnergy, lat, planeLength, maxPlaneVolt, maxPlaneCurr, planePower, maxInvVolt, minInvVolt, maxInvCurr, invPower]);
 
-  if (!calc) return <p class="text-danger">Invalid input - check console</p>
-  try { calc.checkingLimits(); } catch (e) { return <p class="text-danger">{e.message}</p>}
-
-  console.log(calc.planeNumber(), calc.invNumber(), calc.planeStringNumber());
-  
-  console.log('Actual Plane String Number: ', calc.actualPlaneParalallelNumber(), 'Excess Plane Number: ', calc.excessPlaneNumber());
-
-  const { theme } = useTheme();
+  const validationError = useMemo(() => {
+    if (!calc) return "Invalid input parameters. Check console for details.";
+    try {
+      calc.checkingLimits();
+      return null;
+    } catch (e) {
+      return e.message;
+    }
+  }, [calc]);
 
   useEffect(() => {
-    if (!calc) return;
+    if (!calc || validationError || !containerRef.current) return;
     
-
     const renderGrid = () => {
-
-      const container = d3.select(containerRef.current); container.selectAll('*').remove(); // creating the container then to clear previous SVG
-      const containerWidth = containerRef.current.getBoundingClientRect().width;
-      const containerHeight = 500;
-      const totalPlanes = calc.planeNumber();  
-      const margin = { top: totalPlanes > 10 ? 50 : 80, right: 40, bottom: totalPlanes > 10 ? 40 : 100, left: totalPlanes > 10 ? 40 : 80}
-      const h = containerHeight;
-      const w = containerWidth;
+      const container = d3.select(containerRef.current); container.selectAll('*').remove(); // creating the container then to clear previous SVG 
+      const margin = { top: 80, right: 80, bottom: 80, left: 80}
+      const h = 500;
+      const w = containerRef.current.getBoundingClientRect().width;
       const width = w - margin.left - margin.right;
       const height = h - margin.top - margin.bottom;
-
-      
+      const totalPlanes = calc.planeNumber(); 
       const rows = calc.actualPlaneParalallelNumber();
-      const cols = Math.floor(totalPlanes / rows);
-      const worldWidth = (cols - 1) * calc.minimumDistance() + planeLength;
-      const worldHeight = rows * planeWidth;
+      const cols = calc.invNumber() * calc.planeStringNumber();
+      const gridWidth = (cols - 1) * calc.minimumDistance() + planeLength;
+      const gridHeight = calc.excessPlaneNumber() > 0 ? (rows + Math.ceil(calc.excessPlaneNumber() / calc.invNumber())) * planeWidth : rows * planeWidth;
 
       const dataset = Array.from({length: totalPlanes}, (_, i) => ({ x: i % cols, y: Math.floor(i / cols) })); // [{x:0,y:0}, {x:1,y:0}, ..., {x:11,y:9}] if 12 cols × 10 rows
 
-      const svg = container
-      .append('svg')
-      .attr('width', '100%')
-      .attr('height', h)
-      .attr('viewBox', `0 0 ${containerWidth} ${h}`)
-      .attr('preserveAspectRatio', 'xMidYMid meet');
-          
-      const g = svg.append('g').attr('transform', `translate(${margin.left}, ${margin.top})`);
-
-      const xScale = d3.scaleLinear().domain([0, worldWidth]).range([0, width]);
-      const yScale = d3.scaleLinear().domain([0, worldHeight]).range([0, height]);
-
+      const svg = container.append('svg').attr('width', '100%').attr('height', h).attr('viewBox', `0 0 ${w} ${h}`).attr('preserveAspectRatio', 'xMidYMid meet');
+      const g = svg.append('g').attr('transform', `translate(${margin.left}, ${margin.top})`);     
+      
+      const xScale = d3.scaleLinear().domain([0, gridWidth]).range([0, width]);
+      const yScale = d3.scaleLinear().domain([0, gridHeight]).range([0, height]);
       const planePixelLength = xScale(planeLength) - xScale(0);
       const planePixelWidth = yScale(planeWidth) - yScale(0);
 
@@ -85,22 +74,40 @@ export default function LayoutDrawer({
       .attr('y', d => yScale(d.y))
       .attr('width', planePixelLength)
       .attr('height', planePixelWidth)
-      .attr('fill', theme === 'light' ? '#0f172a' : '#ced4da');
+      .attr('fill', theme === 'light' ? '#0f172a' : '#ced4da')
+      .attr('rx', 6)
+      .attr('ry', 6);
+
+      g.append('text')
+        .attr('x', xScale(gridWidth / 2))
+        .attr('y', -yScale(gridHeight * 0.1))
+        .attr('text-anchor', 'middle')
+        .attr('font-family', 'Arial, Helvetica, sans-serif')
+        .attr('font-size', '14px')
+        .attr('font-weight', '600')
+        .attr('fill', theme === 'light' ? '#0f172a' : '#ced4da')
+        .text('Length →');
+
+      g.append('text')
+        .attr('x', -xScale(gridWidth * 0.025))
+        .attr('y', yScale(gridHeight / 2))
+        .attr('text-anchor', 'middle')
+        .attr('font-family', 'Arial, Helvetica, sans-serif')
+        .attr('font-size', '14px')
+        .attr('font-weight', '600')
+        .attr('fill', theme === 'light' ? '#1e293b' : '#e2e8f0')
+        .attr('transform', `rotate(-90, ${-xScale(gridWidth * 0.025)}, ${yScale(gridHeight / 2)})`)
+        .text('← Width');
 
       function addDimension(x1, y1, x2, y2, text, options = {}) {
         const { offset = 30, textOffset = 10 } = options;
 
         const isVertical = Math.abs(y2 - y1) > Math.abs(x2 - x1);
 
-        const lineX1 = isVertical ? x1 : x1 ;
-        const lineY1 = isVertical ? y1 : y1 ;
-        const lineX2 = isVertical ? x2 : x2 ;
-        const lineY2 = isVertical ? y2 : y2 ;
-
-        const ext1x = isVertical ? x1 : x1 ;
-        const ext1y = isVertical ? y1 - offset / 2 : y2;
-        const ext2x = isVertical ? x2 : x2 ;
-        const ext2y = isVertical ? y2 + offset / 2 : y2;
+        const lineX1 = x1;
+        const lineY1 = y1;
+        const lineX2 = x2;
+        const lineY2 = y2;
 
         if (!g.select('#arrow').node()) {
           g.append('defs')
@@ -114,23 +121,13 @@ export default function LayoutDrawer({
           .attr('orient', 'auto-start-reverse')
           .append('path')
           .attr('d', 'M 0 0 L 10 5 L 0 10 z')
-          .attr('fill', theme === 'light' ? '#333' : 'white');
+          .attr('fill', theme === 'light' ? '#1e293b' : '#e2e8f0');
         }
-
-        g.append('line')
-        .attr('x1', xScale(ext1x)).attr('y1', yScale(ext1y))
-        .attr('x2', xScale(ext1x)).attr('y2', yScale(ext1y))
-        .attr('stroke', 'red').attr('stroke-width', 1.5);
-
-        g.append('line')
-        .attr('x1', xScale(ext2x)).attr('y1', yScale(ext2y))
-        .attr('x2', xScale(ext2x)).attr('y2', yScale(ext2y))
-        .attr('stroke', 'red').attr('stroke-width', 1.5);
 
         g.append('line')
         .attr('x1', xScale(lineX1)).attr('y1', yScale(lineY1))
         .attr('x2', xScale(lineX2)).attr('y2', yScale(lineY2))
-        .attr('stroke', theme === 'light' ? '#333' : 'white')
+        .attr('stroke', theme === 'light' ? '#1e293b' : '#e2e8f0')
         .attr('stroke-width', 2)
         .attr('marker-start', 'url(#arrow)')
         .attr('marker-end', 'url(#arrow)');
@@ -139,24 +136,26 @@ export default function LayoutDrawer({
         const midY = (lineY1 + lineY2) / 2;
 
         g.append('text')
-        .attr('x', isVertical ? xScale(midX) + textOffset: xScale(midX))
-        .attr('y', isVertical ? yScale(midY) - textOffset * 2: yScale(midY) - textOffset)
+        .attr('x', isVertical ? xScale(midX) : xScale(midX))
+        .attr('y', isVertical ? yScale(midY) : yScale(midY) - textOffset)
         .attr('text-anchor', 'middle')
-        .attr('transform', isVertical ? `translate(${xScale(midX) - 15}, ${yScale(midY)}) rotate(-90)` : null)
+        .attr('transform', isVertical ? `translate(${xScale(midX) - textOffset}, ${yScale(midY/2)}) rotate(-90)` : null)
         .attr('font-family', 'Arial, Helvetica, sans-serif')
         .attr('font-size', '14px')
-        .attr('fill', theme === 'light' ? '#333' : 'white')
+        .attr('font-weight', '600')
+        .attr('fill', theme === 'light' ? '#1e293b' : '#e2e8f0')
         .text(text);
       }
 
-      addDimension(0, -0.2, planeLength, -0.2, `${planeLength.toFixed(2)}m`, {textOffset: totalPlanes > 10 ? 4.5 : 1.5} ); //length dimension
-      addDimension(0, totalPlanes > 10 ? -0.8 : -0.5, calc.minimumDistance(), totalPlanes > 10 ? -0.8 : -0.5, `${calc.minimumDistance().toFixed(2)}m`, {textOffset: totalPlanes > 10 ? 4.5 : 1.5} ); //minimumDistance dimension
-      addDimension(totalPlanes > 10 ? -0.1 : -0.1, 0, totalPlanes > 10 ? -0.1 : -0.1, planeWidth, `${planeWidth.toFixed(2)}m`, { textOffset: totalPlanes > 10 ? 4.5 : 15 } ); //width dimension
+      addDimension(0, -gridHeight * 0.025, calc.minimumDistance(), -gridHeight * 0.025, `${calc.minimumDistance().toFixed(2)}m`); //minimumDistance dimension
     }
-    // to add length, width, minimum distance legend or something, more info aswell in the summary
 
     renderGrid();
   }, [calc, theme]);
+
+  if (validationError) {
+    return <p className="text-danger">{validationError}</p>;
+  }
 
   return (
     <div>

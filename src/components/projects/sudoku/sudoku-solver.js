@@ -27,7 +27,7 @@ class SudokuSolver {
   }
 
   checkRegionPlacement(puzzleString, row, column, value) {
-    const rowNum = row.charCodeAt(0) - 65; //starting from A which is equal 0
+    const rowNum = row.charCodeAt(0) - 65; 
     const colNum = parseInt(column) - 1;
     const regionRowStart = Math.floor(rowNum / 3) * 3;
     const regionColStart = Math.floor(colNum / 3) * 3;
@@ -79,7 +79,7 @@ class SudokuSolver {
     }
 
     if (solveRecursive(data, 0)) return data.join('');
-    return false; // Return error if unsolvable 
+    return false; 
   }
 }
 

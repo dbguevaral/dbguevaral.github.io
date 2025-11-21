@@ -48,7 +48,7 @@ class LayoutCalculator {
 
     checkingLimits() {
         if (this.invPower * this.invNumber() < this.planePower * this.planeNumber()) 
-            throw new Error ("Planes Total Power musn't exceed Inverters Total Power");
+            throw new Error ("Panels Total Power musn't exceed Inverters Total Power");
     }
 
     optAngle() {

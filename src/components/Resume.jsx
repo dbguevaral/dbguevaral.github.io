@@ -36,7 +36,7 @@ function Resume() {
                             </div>
                             <div class="row g-0">
                                 <div class="col-md-2 basics fw-semibold">Summary</div>
-                                <p class="col pb-2">Full stack developer with an electromechanical engineering background, specializing in renewable energy solutions and experienced in JavaScript, React & Node.js.</p>
+                                <p class="col pb-2">Electromechanical engineer specializing in renewable energy systems, now bridging hardware and software through full-stack development. Experienced in JavaScript, React & Node.js.</p>
                             </div>  
                         </section>
 
@@ -131,14 +131,14 @@ function Resume() {
                                         <h6>freeCodeCamp</h6><p>23.06.2025</p>  
                                     </div>
                                     <div class="col-md-6">
-                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></h5>
-                                            <h6>freeCodeCamp</h6><p>05.05.2025</p>
+                                        <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></h5>
+                                        <h6>freeCodeCamp</h6><p>05.05.2025</p>
 
-                                            <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/responsive-web-design">Responsive Web Design</a></h5>
-                                            <h6>freeCodeCamp</h6><p>10.04.2025</p>
+                                        <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/responsive-web-design">Responsive Web Design</a></h5>
+                                        <h6>freeCodeCamp</h6><p>10.04.2025</p>
 
-                                            <h5><a target="_blank" href="https://i.imgur.com/4Zz5YRF.jpeg">Power BI Course</a></h5>
-                                            <h6>Idat</h6><p>05.12.2022</p>
+                                        <h5><a target="_blank" href="https://i.imgur.com/4Zz5YRF.jpeg">Power BI Course</a></h5>
+                                        <h6>Idat</h6><p>05.12.2022</p>
                                     </div>
                                 </div> 
                             </div>
@@ -154,14 +154,14 @@ function Resume() {
                                         <li>CSS3</li>
                                         <li>JavaScript</li>
                                     </ul>
-
                                     <h5>Tools & Platforms</h5>
                                     <ul>
                                         <li>Git & GitHub</li>
                                         <li>VS Code</li>
                                         <li>npm</li>
-                                        <li>Replit</li>
-                                        <li>Code Sand Box</li>
+                                        <li>NASA Power API</li>
+                                        <li>Mongo DB</li>
+                                        <li>Google Cloud API & Services</li>
                                     </ul>
                                 </div>
                                 <div class="col">    
