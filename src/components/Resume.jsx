@@ -1,3 +1,5 @@
+import DownloadResume from "./Download";
+
 function Resume() {
     return (
         <div id="resume">
@@ -13,9 +15,13 @@ function Resume() {
                         <a class="nav-link fw-normal" href="#languages">Languages</a>
                     </nav>
                 </div>
+                
                 <div class="col">  
                     <div id="section-container" data-bs-spy="scroll" data-bs-target="#left-nav" data-bs-smooth-scroll="true" tabindex="0">
-                        <h1 class="display-3">Resume</h1>
+                        <div class="d-flex justify-content-between">
+                            <h1 class="display-3">Resume</h1>
+                            <div><DownloadResume/></div>
+                        </div>
                         <section id="basics" class="custom-container">
                             <h2 class="m-0 mb-2">Basics</h2>
                             <div class="row g-0">
@@ -161,7 +167,7 @@ function Resume() {
                                         <li>npm</li>
                                         <li>NASA Power API</li>
                                         <li>Mongo DB</li>
-                                        <li>Google Cloud API & Services</li>
+                                        <li>Google Cloud APIs & Services</li>
                                     </ul>
                                 </div>
                                 <div class="col">    
