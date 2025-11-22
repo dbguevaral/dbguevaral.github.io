@@ -45,7 +45,7 @@ function Resume() {
                             <div class="row g-0">
                                 <div class="col-md-3 date"><span class="rounded-1 fw-semibold">11.2023 - 01.2024</span></div>
                                 <div class="col-md">
-                                    <h4>Drafter in the Metallurgy Area</h4>
+                                    <h4>Drafter in Metallurgy Area</h4>
                                     <h6>Autoprocesos S.A.C.</h6>
                                     <p>Development of flow diagrams for the expansion to 2100
                 tons per day of the custom-colquisiri mining unit at the basic
@@ -56,7 +56,7 @@ function Resume() {
                             <div class="row">
                                 <div class="col-md-3 date"><span class="rounded-1 fw-semibold">03.2019 - 07.2022</span></div>
                                 <div class="col-md">
-                                    <h4>Drafter in the Electrical and Metallurgy Area</h4>
+                                    <h4>Drafter in Electrical and Metallurgy Area</h4>
                                     <h5>GEMIN Associates</h5>
                                     <p> Development of single-line diagrams, power and control
                 systems, grounding, and lighting in the electrical discipline.
@@ -70,7 +70,7 @@ function Resume() {
                             <div class="row">
                                 <div class="col-md-3 date"><span class="rounded-1 fw-semibold">09.2018 - 02.2019</span></div>
                                 <div class="col-md">
-                                    <h4>Drafter in the Instrumentation Area</h4>
+                                    <h4>Drafter in Instrumentation Area</h4>
                                     <h5>Environmental Science Engineering & Gis S.R.L 
                 Escegis</h5>
                                     <p>Drawing of P&ID diagrams, as well as architectural and
@@ -100,14 +100,14 @@ function Resume() {
                             <div class="row">
                                 <div class="col-md-3 date"><span class="rounded-1 fw-semibold">01.2017 - 02.2022</span></div>
                                 <div class="col-md">
-                                    <h4><a target="_blank" href="https://i.imgur.com/Q8HiFsY.jpeg">Bachelor's in <br/>Electromechanical Engineering</a></h4>
+                                    <h4><a target="_blank" href="https://i.imgur.com/Q8HiFsY.jpeg">Bachelor's Degree of<br/>Electromechanical Engineering</a></h4>
                                     <p class="fw-semibold">Universidad Tecnológica del Perú</p>
                                 </div>          
                             </div>
                             <div class="row">
                                 <div class="col-md-3 date"><span class="rounded-1 fw-semibold">01.2015 - 12.2016</span></div>
                                 <div class="col-md">
-                                    <h4>Bachelor's in Electronic Engineering</h4>
+                                    <h4>Bachelor's Degree of<br/>Electronic Engineering</h4>
                                     <p><span class="fw-semibold">Universidad Nacional del Callao</span><br/>Completed to 4th Semester</p>
                                 </div>          
                             </div>

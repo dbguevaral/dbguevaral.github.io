@@ -127,4 +127,6 @@ function PeakSolarHours() {
     )
 }
 
+// to add details about simplifying things
+
 export default PeakSolarHours;
