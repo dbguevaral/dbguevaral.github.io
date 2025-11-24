@@ -74,7 +74,7 @@ function PeakSolarHours() {
                 <div class="row">
                     <div class="col">
                         <div class="form-check">
-                            <label class="form-check-label" for="dir-box">Using address</label>
+                            <label class="form-check-label" for="dir-box">Address</label>
                             <input type="radio" id="dir-box" class="form-check-input" name="data-coord" onChange={() => setLocationForm('dir-box')} required/>
                         </div>
                         <input id="autocomplete" class="form-control" type="text" disabled={locationForm !== 'dir-box'} placeholder="Your address" value={dirText} onChange={e => setDirText(e.target.value)} required></input>
@@ -83,7 +83,7 @@ function PeakSolarHours() {
                     <div class="col">
                         <div class="form-check">
                             <input type="radio" id="coord-box" class="form-check-input" name="data-coord" onChange={() => setLocationForm('coord-box')} required/>
-                            <label class="form-check-label" for="coord-box">Using coordinates</label>
+                            <label class="form-check-label" for="coord-box">Coordinates</label>
                         </div>
                         <div class="input-group gap-2">
                             <input class="form-control" type="text" disabled={locationForm !== 'coord-box'} value={latValue} onChange={e => setLatValue(e.target.value)} placeholder="Lat." required/>
