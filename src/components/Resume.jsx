@@ -124,6 +124,9 @@ function Resume() {
                             <div>
                                 <div class="row">
                                     <div class="col-md-6">
+                                        <h5><a target="_blank" href="https://certificates.simplicdn.net/share/9625205_9801665_1766435625267.pdf">TypeScript Basics</a></h5>
+                                        <h6>simplilearn | SkillUp</h6><p>22.12.2025</p>
+
                                         <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/quality-assurance-v7">Quality Assurance</a></h5>
                                         <h6>freeCodeCamp</h6><p>29.09.2025</p>
                                     
@@ -133,10 +136,12 @@ function Resume() {
                                         <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/data-visualization">Data Visualization</a></h5>
                                         <h6>freeCodeCamp</h6><p>30.07.2025</p>
                                     
-                                        <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/front-end-development-libraries">Front End Development Libraries</a></h5>
-                                        <h6>freeCodeCamp</h6><p>23.06.2025</p>  
+                                          
                                     </div>
                                     <div class="col-md-6">
+                                        <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/front-end-development-libraries">Front End Development Libraries</a></h5>
+                                        <h6>freeCodeCamp</h6><p>23.06.2025</p>
+
                                         <h5><a target="_blank" href="https://www.freecodecamp.org/certification/dbguevaral/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></h5>
                                         <h6>freeCodeCamp</h6><p>05.05.2025</p>
 
@@ -159,6 +164,7 @@ function Resume() {
                                         <li>HTML5</li>
                                         <li>CSS3</li>
                                         <li>JavaScript</li>
+                                        <li>TypeScript</li>
                                     </ul>
                                     <h5>Tools & Platforms</h5>
                                     <ul>
