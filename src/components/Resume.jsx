@@ -49,7 +49,7 @@ function Resume() {
                         <section id="work" class="custom-container">
                             <h2 class="m-0 mb-2">Work</h2>
                             <div class="row g-0">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">11.2023 - 01.2024</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2023.11 - 2024.01</span></div>
                                 <div class="col-md">
                                     <h4>Drafter in Metallurgy Area</h4>
                                     <h6>Autoprocesos S.A.C.</h6>
@@ -60,7 +60,7 @@ function Resume() {
                                 </div>          
                             </div>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">03.2019 - 07.2022</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2019.03 - 2022.07</span></div>
                                 <div class="col-md">
                                     <h4>Drafter in Electrical and Metallurgy Area</h4>
                                     <h5>GEMIN Associates</h5>
@@ -74,7 +74,7 @@ function Resume() {
                                 </div>          
                             </div>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">09.2018 - 02.2019</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2018.09 - 2019.02</span></div>
                                 <div class="col-md">
                                     <h4>Drafter in Instrumentation Area</h4>
                                     <h5>Environmental Science Engineering & Gis S.R.L 
@@ -90,28 +90,28 @@ function Resume() {
                         <section id="education" class="custom-container">
                             <h2 class="m-0 mb-2">Education</h2>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">04.2023 - Present</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2023.04 - 2024.03</span></div>
                                 <div class="col-md">
                                     <h4>Master's in Renewable Energies</h4>
                                     <p><span class="fw-semibold">Universidad Europea de Madrid</span><br/>Coursework Completed (Thesis Pending)</p>
                                 </div>          
                             </div>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">03.2022 - 02.2023</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2022.03 - 2023.02</span></div>
                                 <div class="col-md">
                                     <h4><a target="_blank" href="https://i.imgur.com/5O3VMqn.jpeg">Professional Title of<br/>Electromechanical Engineer</a></h4>
                                     <p><span class="fw-semibold">Universidad Tecnológica del Perú</span></p>
                                 </div>          
                             </div>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">01.2017 - 02.2022</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2017.01 - 2022.02</span></div>
                                 <div class="col-md">
                                     <h4><a target="_blank" href="https://i.imgur.com/Q8HiFsY.jpeg">Bachelor's Degree of<br/>Electromechanical Engineering</a></h4>
                                     <p class="fw-semibold">Universidad Tecnológica del Perú</p>
                                 </div>          
                             </div>
                             <div class="row">
-                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">01.2015 - 12.2016</span></div>
+                                <div class="col-md-3 date"><span class="rounded-1 fw-semibold">2015.01 - 2016.12</span></div>
                                 <div class="col-md">
                                     <h4>Bachelor's Degree of<br/>Electronic Engineering</h4>
                                     <p><span class="fw-semibold">Universidad Nacional del Callao</span><br/>Completed to 4th Semester</p>

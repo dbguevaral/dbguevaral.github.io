@@ -98,14 +98,14 @@ function PeakSolarHours() {
                             <input type="radio" id="horizontal" class="form-check-input" name="plane" onChange={() => setOrientationForm('horizontal')} required/>
                             <label class="form-check-label" for="horizontal">Horizontal Panel</label>
                         </div>
-                        <div class="form-text">For panels flat on roof, facing straight to the top - 0° tilt</div>
+                        <div class="form-text">For flat panels on roof, facing straight to the top - 0° tilt</div>
                     </div>
                     <div class="col">
                         <div class="form-check">
                             <input type="radio" id="tilted" class="form-check-input" name="plane" onChange={() => setOrientationForm('tilted')} required/>
                             <label class="form-check-label" for="tilted">Tilted Panel</label>
                         </div>
-                        <div class="form-text">For panels tilted at optimal latitude angle</div>
+                        <div class="form-text">For tilted panels at optimal latitude angle</div>
                     </div>
                 </div>
                 <div>

@@ -54,7 +54,7 @@ function LayoutMaker() {
     return (
         <div>
             <h1>Solar Layout Maker</h1>
-            <p class="justifying-text">To meet electrical demand needs, it's required to know the amount of solar panels that can accomplish it. For this, a grid of Planes is needed, taking in consideration the number of panels arranged in parallel rows and series strings, while matching each panel's voltage, current and power. This application goal is to simplify this task by building automatically the grid of solar panels by entering the total system power plus Plane specs.</p>
+            <p class="justifying-text">To meet electrical demand needs, it's required to know the amount of components that can accomplish it. For this, a grid of panels is needed, taking in consideration their number arranged in parallel rows and series strings, while matching each panel's voltage, current and power. This application goal is to simplify this task by building automatically the grid of solar panels by entering the total system power plus Plane specs.</p>
             <p class="fw-semibold">Fill the following inputs to create the system's grid</p>
             <form onSubmit={handleSubmit} class="row gap-2">
                 <div class="row">
